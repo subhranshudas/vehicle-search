@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+	<div id="page">
+		<div class="search-panel">
+			<div class="controls">
+				<span>
+					<label for="vehicle-type">Type</label>
+					<select id="vehicle-type">
+						<option selected value="choose">choose</option>
+						<option value="new">new</option>
+						<option value="used">used</option>
+						<option value="certified">certified</option>
+					</select>
+				</span>
+				<span>
+					<label for="vehicle-make">Make</label>
+					<input type="text" id="vehicle-make">
+				</span>
+				<span>
+					<label for="vehicle-model">Model</label>
+					<input type="text" id="vehicle-model">
+				</span>
+				<span class="btn" id="add-vehicle-btn">+</span>
+			
+				<div class="search-box">
+				<input type="text" placeholder="search"/>
+			</div>
+			</div>
+			
+
+			<div class="datagrid">
+				<div class="row header">
+					<span class="col">Type</span>
+					<span class="col">Make</span>
+					<span class="col">Model</span>
+				</div>
+				<div id="vehicle-list">
+				<script type="text/template" id="gridtpl">	
+					<% _.each(list, function(vehicle) { %>	
+						<div class="row">
+							<span class="col"><%=vehicle.type %></span>
+							<span class="col"><%=vehicle.make %></span>
+							<span class="col"><%=vehicle.model %></span>
+						</div>
+					<% }); %>
+				</script>
+			</div>
+			</div>
+		</div>
+ </div>
+<script src="js/lib/jquery.js"></script>
+<script src="js/lib/underscore.js"></script>	
+<script src="js/VehicleCollection.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

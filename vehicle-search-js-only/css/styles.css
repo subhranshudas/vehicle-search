@@ -1,0 +1,11 @@
+#page{ width:60%;margin:5% auto;}
+.controls{border:1px solid #ccc;text-align: center;padding: 20px;}
+.controls span{display:inline-block;}
+.controls span label{display:block;font-size: 18px;text-align: left;}
+.btn{padding:0 7px;background:#ccc;}
+.search-box{text-align: right;}
+.datagrid .row.header{font-weight: bold;background: #9EF5E0;}
+.datagrid .row{border-bottom:1px solid #C4FCEC;}
+.datagrid .row .col{border-right:1px solid #000;width:32%;display: inline-block;}
+.datagrid .row .col:last-child{border-right:0;}
+.error{color:red;font-size: 24px;text-align: center;padding-top:10px;}

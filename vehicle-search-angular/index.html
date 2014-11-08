@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html ng-app="vSeacrhApp">
+<head>
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+	<div id="page">
+		<div class="search-panel" ng-controller="PanelController">
+			<div class="controls">
+				<span>
+					<label for="vehicle-type">Type</label>
+					<select id="vehicle-type" ng-model="vehicle.type">
+						<option value="choose" selected>choose</option>
+						<option value="new">new</option>
+						<option value="used">used</option>
+						<option value="certified">certified</option>
+					</select>
+				</span>
+				<span>
+					<label for="vehicle-make">Make</label>
+					<input type="text" id="vehicle-make" ng-model="vehicle.make">
+				</span>
+				<span>
+					<label for="vehicle-model">Model</label>
+					<input type="text" id="vehicle-model" ng-model="vehicle.model">
+				</span>
+				<button class="btn" id="add-vehicle-btn" ng-click="addVehicle(vehicle)" ng-disabled="vehicle.type === 'choose'">+</button>
+			
+				<div class="search-box">
+				<input type="text" placeholder="search" ng-model="search"/>
+			</div>
+			</div>
+			
+			<div class="datagrid">
+				<div class="row header">
+					<span class="col">Type</span>
+					<span class="col">Make</span>
+					<span class="col">Model</span>
+				</div>
+				
+				<div class="row" ng-repeat="v in vList | filter:search">
+					<span class="col">{{v.type}}</span>
+					<span class="col">{{v.make}}</span>
+					<span class="col">{{v.model}}</span>
+				</div>
+				
+			</div>
+			</div>
+		</div>
+ </div>
+<script src="js/lib/angular.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
