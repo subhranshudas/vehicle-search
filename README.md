@@ -7,3 +7,5 @@ Comparision between how Angular handles the responsibility that otherwise we wou
 if the application is written in only JS.
 
 testing the merge option
+
+pushing to remote
